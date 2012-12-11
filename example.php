@@ -31,6 +31,8 @@ class Cron extends CI_Controller {
 					}
 				}
 			}
+
+			return $site_data;
 		}
 		else{
 			return false;
