@@ -57,3 +57,4 @@ Crawl github:
     
     $site_data = get_site_data("http://github.com", 1, 0);
 
+Licensed under MIT License (https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt)
