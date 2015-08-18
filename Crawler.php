@@ -314,8 +314,8 @@ class Crawler{
 					}
 				}
 			}
-			
-			if($include_term_found){
+
+			if(isset($include_term_found) && $include_term_found){
 				$this->links[$anchor_href] = array(
 					'raw_href' => $anchor->href,
 					'full_href' => $anchor_href,
