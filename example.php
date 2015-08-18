@@ -11,7 +11,7 @@ class Cron extends CI_Controller {
 		$site_data = $this->get_site_data($site_url, 1, 0);
 	}
 
-	private function get_site_data($url, $max_depth = 1, $current_depth = 0){
+	private function get_site_data($site_url, $max_depth = 1, $current_depth = 0){
 		$current_depth++;
 
 		$this->load->library('crawler');
@@ -28,7 +28,6 @@ class Cron extends CI_Controller {
 			if($current_depth <= $max_depth){
 				foreach($site_data['links'] as $link_key => &$link){
 					$link['data'] = $this->get_site_data($link, $max_depth, $current_depth);
-					}
 				}
 			}
 
